@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahzad's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner_header">
+            <nav class="navbar" style="display: flex; gap: 4rem;">
+                <a class="logo" href="#">M.Shahzad</a>
+
+                <ul class="nav_links">
+                    <li class="dropdown">
+                        <a class="nav_link" id="nav_link_detection" href="#">Object Detection</a>
+                        <ul class="dropdown_menu" id="dropdown_menu_detection">
+                            <li>
+                                <a class="link_page" href="skill_detail.html?skill_id">Real-time Object Tracking</a>
+                            </li>
+                            <li><a class="link_page" href="skill_detail.html?skill_id=image-classification">image Classification</a></li>
+                            <li><a class="link_page" href="skill_detail.html?skill_id=face-detection">Face Detection</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav_link" id="nav_link_vision" href="#vision">NLP</a>
+                        <ul class="dropdown_menu" id="dropdown_menu_vision">
+                            <li><a class="link_page" href="skill_detail.html?skill_id=agentic-ai">Agentic Ai</a></li>
+                            <li><a class="link_page" href="skill_detail.html?skill_id=chatbot">Chatbot</a></li>
+                            <li><a class="link_page" href="skill_detail.html?skill_id=mathsolver">MathSolver</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav_link" id="nav_link_ai" href="#ai">Web Development</a>
+                        <ul class="dropdown_menu" id="dropdown_menu_ai">
+                            <li><a class="link_page" href="skill_detail.html?skill_id=fullstack-development">Full-Stack Development</a></li>
+                            <li><a class="link_page" href="skill_detail.html?skill_id=frontend-development">Front-End Development</a></li>
+                            <li><a class="link_page" href="skill_detail.html?skill_id=backend-development">Backend_development</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content"> Welcome to My Portfolio I'm Shahzad specialist </div>
+        <div class="animated-text" id="animatedText"></div>
+    </section>
+
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab('detection')">Object Detection</div>
+        <div class="tab" onclick="switchTab('vision')">NLP</div>
+        <div class="tab" onclick="switchTab('ai')">Web Development</div>
+    </div>
+
+    <section id="detection" class="cards-container active">
+        <div class="card">
+            <a class="link_page" href="skill_detail.html?skill_id=object-detection">
+                <h1>Real-time Object Tracking</h1>
+                <img class="card_images" src="topics/Object_Detection_AI.jpg" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="skill_detail.html?skill_id=image-classification" class="link_page">
+                <h1>image Classification</h1>
+                <img class="card_images" src="topics/Object_Detection_AI.jpg" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="skill_detail.html?skill_id=face-detection" class="link_page">
+                <h1>Face Detection</h1>
+                <img class="card_images" src="topics/face.jpg" alt="">
+            </a>
+        </div>
+    </section>
+
+    <section id="vision" class="cards-container">
+        <div class="card">
+            <a href="skill_detail.html?skill_id=agentic-ai" class="link_page">
+                <h1>Agentic Ai</h1>
+                <img class="card_images" src="topics/agentica.jpg" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="skill_detail.html?skill_id=chatbot" class="link_page">
+                <h1>Chatbot</h1>
+                <img class="card_images" src="topics/chatbot1.jpg" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="skill_detail.html?skill_id=mathsolver" class="link_page">
+                <h1>MathSolver</h1>
+                <img class="card_images" src="topics/mathsolver.jpg" alt="">
+            </a>
+        </div>
+    </section>
+
+    <section id="ai" class="cards-container">
+        <div class="card">
+            <a href="skill_detail.html?skill_id=fullstack-development" class="link_page">
+                <h1>Full-Stack Development</h1>
+                <img class="card_images" src="topics/Full_Stack_Developer.webp" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="skill_detail.html?skill_id=frontend-development" class="link_page">
+                <h1>Front-End Development</h1>
+                <img class="card_images" src="topics/Fontend_webdevelopment.webp" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="skill_detail.html?skill_id=backend-development" class="link_page">
+                <h1>Backend_development</h1>
+                <img class="card_images" src="topics/Backend_development.webp" alt="">
+            </a>
+        </div>
+    </section>
+    <section id="about-me" class="about-me">
+        <div class="about-me-content">
+            <h1>About Me</h1>
+            <p>Hi, I'm Shahzad, an AI Developer and Full-Stack Developer specializing in Django. I am passionate about creating intelligent solutions and building robust web applications that make a difference.</p>
+        </div>
+    </section>
+
+
+
+    <script>
+    </script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: shahzad.abdulmajeed4894@gmail.com</p>
+                <p>Phone: +92 320 6236425 | +92 309 9081285</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <p>About Us</p>
+                <p>Projects</p>
+                <p>Services</p>
+            </div>
+            <div class="footer-section">
+                <h3>Social</h3>
+                <div class="socials ">
+                    <a href="https://www.linkedin.com/in/shahzad-abdulmajeed-618887220/ ">LinkedIn</a>
+                    <a href="https://github.com/MShahzadAbdulmajeed ">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
