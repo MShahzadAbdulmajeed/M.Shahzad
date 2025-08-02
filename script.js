@@ -1,15 +1,31 @@
+// Mobile Menu Toggle
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navLinks = document.getElementById('navLinks');
+
+mobileMenuToggle.addEventListener('click', () => {
+    mobileMenuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav_link, .link_page').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
 // Animated Text Content
 const roles = [
-    "Chatbot Developer.",
-    "Fullstack Developer.",
-    "AI Developer.",
-    "AI Agent Specialist.",
-    "AI Engineer.",
-    "AI Researcher.",
+    "AI Developer",
+    "Full-Stack Developer",
+    "Chatbot Specialist",
+    "AI Agent Expert",
+    "Machine Learning Engineer",
+    "Computer Vision Developer"
 ];
 
 const animatedText = document.getElementById("animatedText");
-
 let currentIndex = 0;
 
 function showNextRole() {
@@ -24,11 +40,13 @@ function showNextRole() {
     currentIndex = (currentIndex + 1) % roles.length;
 
     // Repeat after delay
-    setTimeout(showNextRole, 2000); // 2 seconds per role
+    setTimeout(showNextRole, 3000); // 3 seconds per role
 }
 
-// Start animation
-showNextRole();
+// Start animation after page load
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(showNextRole, 500);
+});
 
 // Tab Switching
 function switchTab(tabName) {

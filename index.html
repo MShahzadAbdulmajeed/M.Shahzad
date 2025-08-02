@@ -6,56 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shahzad's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
         <div class="inner_header">
-            <nav class="navbar" style="display: flex; gap: 4rem;">
-                <a class="logo" href="#">M.Shahzad</a>
+            <nav class="navbar">
+                <a class="logo" href="#">
+                    <i class="fas fa-code"></i>
+                    M.Shahzad
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-                <ul class="nav_links">
+                <ul class="nav_links" id="navLinks">
                     <li class="dropdown">
-                        <a class="nav_link" id="nav_link_detection" href="#">Object Detection</a>
+                        <a class="nav_link" id="nav_link_detection" href="#">
+                            <i class="fas fa-eye"></i>
+                            Object Detection
+                        </a>
                         <ul class="dropdown_menu" id="dropdown_menu_detection">
                             <li>
-                                <a class="link_page" href="skill_detail.html?skill_id">Real-time Object Tracking</a>
+                                <a class="link_page" href="skill_detail.html?skill_id=object-detection">Real-time Object Tracking</a>
                             </li>
-                            <li><a class="link_page" href="skill_detail.html?skill_id=image-classification">image Classification</a></li>
+                            <li><a class="link_page" href="skill_detail.html?skill_id=image-classification">Image Classification</a></li>
                             <li><a class="link_page" href="skill_detail.html?skill_id=face-detection">Face Detection</a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav_link" id="nav_link_vision" href="#vision">NLP</a>
+                        <a class="nav_link" id="nav_link_vision" href="#vision">
+                            <i class="fas fa-brain"></i>
+                            NLP
+                        </a>
                         <ul class="dropdown_menu" id="dropdown_menu_vision">
-                            <li><a class="link_page" href="skill_detail.html?skill_id=agentic-ai">Agentic Ai</a></li>
+                            <li><a class="link_page" href="skill_detail.html?skill_id=agentic-ai">Agentic AI</a></li>
                             <li><a class="link_page" href="skill_detail.html?skill_id=chatbot">Chatbot</a></li>
                             <li><a class="link_page" href="skill_detail.html?skill_id=mathsolver">MathSolver</a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav_link" id="nav_link_ai" href="#ai">Web Development</a>
+                        <a class="nav_link" id="nav_link_ai" href="#ai">
+                            <i class="fas fa-laptop-code"></i>
+                            Web Development
+                        </a>
                         <ul class="dropdown_menu" id="dropdown_menu_ai">
                             <li><a class="link_page" href="skill_detail.html?skill_id=fullstack-development">Full-Stack Development</a></li>
                             <li><a class="link_page" href="skill_detail.html?skill_id=frontend-development">Front-End Development</a></li>
-                            <li><a class="link_page" href="skill_detail.html?skill_id=backend-development">Backend_development</a></li>
+                            <li><a class="link_page" href="skill_detail.html?skill_id=backend-development">Backend Development</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-
         </div>
     </header>
 
     <section class="hero">
-        <div class="hero-content"> Welcome to My Portfolio I'm Shahzad specialist </div>
-        <div class="animated-text" id="animatedText"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Shahzad</span>
+                </h1>
+                <p class="hero-subtitle">
+                    I'm a <span class="animated-text" id="animatedText"></span>
+                </p>
+                <p class="hero-description">
+                    Passionate about creating intelligent AI solutions and building robust web applications that make a difference in the world.
+                </p>
+                <div class="hero-cta">
+                    <a href="#about-me" class="cta-button primary">
+                        <i class="fas fa-user"></i>
+                        About Me
+                    </a>
+                    <a href="#detection" class="cta-button secondary">
+                        <i class="fas fa-rocket"></i>
+                        View Projects
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-icon" style="--delay: 0s">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 1s">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 2s">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="tabs">
@@ -140,23 +191,36 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Email: shahzad.abdulmajeed4894@gmail.com</p>
-                <p>Phone: +92 320 6236425 | +92 309 9081285</p>
+                <h3><i class="fas fa-envelope"></i> Contact</h3>
+                <p><i class="fas fa-at"></i> shahzad.abdulmajeed4894@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +92 320 6236425</p>
+                <p><i class="fas fa-phone-alt"></i> +92 309 9081285</p>
             </div>
             <div class="footer-section">
-                <h3>Links</h3>
-                <p>About Us</p>
-                <p>Projects</p>
-                <p>Services</p>
-            </div>
-            <div class="footer-section">
-                <h3>Social</h3>
-                <div class="socials ">
-                    <a href="https://www.linkedin.com/in/shahzad-abdulmajeed-618887220/ ">LinkedIn</a>
-                    <a href="https://github.com/MShahzadAbdulmajeed ">GitHub</a>
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <div class="footer-links">
+                    <a href="#about-me"><i class="fas fa-user"></i> About Me</a>
+                    <a href="#detection"><i class="fas fa-project-diagram"></i> Projects</a>
+                    <a href="skill_detail.html"><i class="fas fa-cogs"></i> Skills</a>
                 </div>
             </div>
+            <div class="footer-section">
+                <h3><i class="fas fa-share-alt"></i> Connect</h3>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/shahzad-abdulmajeed-618887220/" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/MShahzadAbdulmajeed" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="mailto:shahzad.abdulmajeed4894@gmail.com">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 M.Shahzad. All rights reserved. Built with ❤️ and modern web technologies.</p>
         </div>
     </footer>
     <script src="script.js"></script>
