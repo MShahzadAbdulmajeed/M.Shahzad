@@ -1,0 +1,456 @@
+{
+  "hero": {
+    "name": "Shahzad",
+    "badge": "Open for new AI opportunities",
+    "roles": [
+      "Full-Stack AI Engineer",
+      "LLM Specialist",
+      "Computer Vision Expert",
+      "Django Backend Developer",
+      "React Frontend Engineer"
+    ],
+    "description": "Architecting the future with Autonomous Agents, Generative AI, and Scalable Web Architectures.",
+    "highlightWords": [
+      "Autonomous Agents",
+      "Generative AI",
+      "Scalable Web Architectures"
+    ]
+  },
+  "about": {
+    "photo": "https://cdn-avatars.huggingface.co/v1/production/uploads/67b335d52ea5fd965b0eab19/y9hNRDcAgn-mf3gV5Mjv-.jpeg",
+    "title": "Full-Stack AI Engineer",
+    "bio": "I'm a dedicated Full-Stack AI Engineer passionate about bridging sophisticated AI models with user-centric web applications. My expertise spans autonomous multi-agent systems, real-time computer vision pipelines, and scalable backends using Django and DRF.",
+    "email": "shahzad.abdulmajeed4894@gmail.com",
+    "phone": "+92 320 6236425",
+    "location": "Pakistan",
+    "availability": "Available for Freelance",
+    "cvUrl": "",
+    "githubUrl": "https://github.com/MShahzadAbdulmajeed",
+    "linkedinUrl": "https://www.linkedin.com/in/shahzad-abdulmajeed-618887220/",
+    "skillGroups": [
+      {
+        "label": "AI / ML",
+        "items": [
+          "TensorFlow",
+          "PyTorch",
+          "OpenCV",
+          "YOLOv5",
+          "LangChain",
+          "CrewAI"
+        ]
+      },
+      {
+        "label": "Frontend",
+        "items": [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion"
+        ]
+      },
+      {
+        "label": "Backend",
+        "items": [
+          "Django",
+          "DRF",
+          "PostgreSQL",
+          "Firebase",
+          "JWT"
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "all",
+      "name": "All Work"
+    },
+    {
+      "id": "cv",
+      "name": "Computer Vision"
+    },
+    {
+      "id": "nlp",
+      "name": "NLP & LLMs"
+    },
+    {
+      "id": "web",
+      "name": "Web Dev"
+    }
+  ],
+  "projects": [
+    {
+      "id": "object-detection",
+      "name": "Object Detection",
+      "icon": "Eye",
+      "category": "cv",
+      "coverImage": "/topics/Object_Detection_AI.jpg",
+      "images": [
+        "/topics/Object_Detection_AI.jpg",
+        "/topics/Object_Detection_AI_1.jpg",
+        "/topics/Model_training.jpg"
+      ],
+      "videos": [
+        "https://www.youtube.com/embed/MPU2HistivI"
+      ],
+      "demoUrl": "#",
+      "githubUrl": "#",
+      "tags": [
+        "Computer Vision",
+        "Deep Learning",
+        "AI"
+      ],
+      "tools": [
+        "TensorFlow",
+        "OpenCV",
+        "YOLOv5",
+        "Transformers",
+        "Keras",
+        "LabelImg",
+        "RTX 3060 GPU"
+      ],
+      "description": "Developed object detection systems using TensorFlow, OpenCV, YOLOv5, and Transformer-based models, optimized with RTX 3060 GPU.",
+      "longDescription": "Built production-grade object detection pipelines capable of identifying and localizing multiple classes in real time. Leveraged YOLOv5 and custom Transformer-based models trained on domain-specific datasets, achieving high mAP scores across surveillance, retail, and traffic use-cases. The system runs inference at 30+ FPS on an RTX 3060 GPU and includes a streaming API built with FastAPI.",
+      "implementations": [
+        {
+          "name": "Real-time Surveillance System",
+          "description": "AI-powered security system with anomaly detection using TensorFlow and OpenCV"
+        },
+        {
+          "name": "Retail Analytics",
+          "description": "Customer behavior tracking using CV and object detection models"
+        },
+        {
+          "name": "Smart Traffic Monitoring",
+          "description": "Detecting traffic violations and vehicle count using YOLOv5 and OpenCV"
+        },
+        {
+          "name": "Multi-Class Object Detector",
+          "description": "Trained custom models for diverse objects using TensorFlow and PyTorch"
+        }
+      ]
+    },
+    {
+      "id": "image-classification",
+      "name": "Image Classification",
+      "icon": "Image",
+      "category": "cv",
+      "coverImage": "/topics/image_classification.jpg",
+      "images": [
+        "/topics/image_classification.jpg",
+        "/topics/Model_training.jpg"
+      ],
+      "videos": [
+        "https://www.youtube.com/embed/AkMxVr9OXnU"
+      ],
+      "demoUrl": "#",
+      "githubUrl": "#",
+      "tags": [
+        "Deep Learning",
+        "AI",
+        "Computer Vision"
+      ],
+      "tools": [
+        "TensorFlow",
+        "Keras",
+        "CNNs",
+        "Matplotlib"
+      ],
+      "description": "Built classification models with CNNs and TensorFlow for real-world applications in healthcare, fashion, and agriculture.",
+      "longDescription": "Designed and trained deep convolutional neural networks for multi-class image classification. Applied transfer learning with ResNet50, MobileNetV2, and EfficientNet to maximize accuracy with limited data. Models are exported as TensorFlow SavedModel and served via a Streamlit interface.",
+      "implementations": [
+        {
+          "name": "Disease Detection in Plants",
+          "description": "Classified plant leaf diseases using CNN achieving 94% accuracy"
+        },
+        {
+          "name": "Fashion Item Classifier",
+          "description": "Built model to identify clothing types from images for e-commerce"
+        },
+        {
+          "name": "Dog Breed Classifier",
+          "description": "Used TensorFlow and transfer learning (ResNet50) for breed prediction"
+        }
+      ]
+    },
+    {
+      "id": "face-detection",
+      "name": "Face Detection",
+      "icon": "User",
+      "category": "cv",
+      "coverImage": "/topics/face_recongnization.jpg",
+      "images": [
+        "/topics/face_recongnization.jpg",
+        "/topics/face.jpg"
+      ],
+      "videos": [],
+      "demoUrl": "#",
+      "githubUrl": "#",
+      "tags": [
+        "Facial Recognition",
+        "AI",
+        "Computer Vision"
+      ],
+      "tools": [
+        "OpenCV",
+        "Haar Cascades",
+        "MTCNN",
+        "DeepFace",
+        "TensorFlow"
+      ],
+      "description": "Created real-time facial recognition and analysis tools using DeepFace and OpenCV.",
+      "longDescription": "Engineered end-to-end facial recognition systems using MTCNN for detection and DeepFace for verification and attribute analysis. The attendance system processes a live webcam feed and logs entries to a database in real time. The emotion analysis dashboard aggregates facial metrics into live charts.",
+      "implementations": [
+        {
+          "name": "Face Attendance System",
+          "description": "Automated attendance using real-time face recognition with 99% precision"
+        },
+        {
+          "name": "Face Analysis Dashboard",
+          "description": "Demographics and emotion recognition via DeepFace analytics"
+        },
+        {
+          "name": "Real-Time Face Tracking",
+          "description": "Multi-face tracking at 25 FPS using OpenCV and MTCNN"
+        }
+      ]
+    },
+    {
+      "id": "agentic-ai",
+      "name": "Agentic AI",
+      "icon": "Bot",
+      "category": "nlp",
+      "coverImage": "/topics/agentica.jpg",
+      "images": [
+        "/topics/agentica.jpg",
+        "/topics/chatbot1.jpg"
+      ],
+      "videos": [
+        "https://www.youtube.com/embed/sal78ACtGTc"
+      ],
+      "demoUrl": "#",
+      "githubUrl": "#",
+      "tags": [
+        "Multi-Agent Systems",
+        "LangChain",
+        "LLMs",
+        "RAG"
+      ],
+      "tools": [
+        "LangChain",
+        "CrewAI",
+        "OpenAI",
+        "Gemini",
+        "Pinecone"
+      ],
+      "description": "Built autonomous, collaborative agents using LangChain and CrewAI integrated with RAG architecture and memory.",
+      "longDescription": "Developed a multi-agent orchestration framework where specialized agents collaborate via CrewAI to complete complex tasks autonomously. Integrated Pinecone vector store for long-term RAG memory. The system supports tool use (web search, code execution, file I/O) and is deployed as a FastAPI microservice.",
+      "implementations": [
+        {
+          "name": "Multi-Agent Chatbot",
+          "description": "CrewAI-based agents that collaborate using shared memory and tools"
+        },
+        {
+          "name": "Task-Specific AI Agents",
+          "description": "Agents for PDF reading, web search, and structured response generation"
+        }
+      ]
+    },
+    {
+      "id": "chatbot",
+      "name": "Chatbot",
+      "icon": "MessageSquare",
+      "category": "nlp",
+      "coverImage": "/topics/chatbot1.jpg",
+      "images": [
+        "/topics/chatbot1.jpg",
+        "/topics/language_translation.jpg",
+        "/topics/text_summerization.jpg"
+      ],
+      "videos": [
+        "https://www.youtube.com/embed/RBnuhhmD0bY"
+      ],
+      "demoUrl": "#",
+      "githubUrl": "#",
+      "tags": [
+        "NLP",
+        "AI",
+        "Conversational Systems"
+      ],
+      "tools": [
+        "LangChain",
+        "OpenAI",
+        "Google Gemini",
+        "Streamlit",
+        "Flask"
+      ],
+      "description": "Designed custom AI-powered chatbots using LLMs and LangChain with tools and memory integration.",
+      "longDescription": "Built a modular chatbot framework supporting multiple LLM backends with persistent conversation memory. The multi-tool chatbot exposes specialized agents for document Q&A, real-time web search, and text summarization. A Streamlit front-end provides an interactive UI.",
+      "implementations": [
+        {
+          "name": "Conversational Assistant",
+          "description": "Intelligent assistant with contextual memory using LLMs and LangChain"
+        },
+        {
+          "name": "Multi-Functional Chatbot",
+          "description": "Chatbot with PDF reader, web search, and summarizer tools integrated"
+        }
+      ]
+    },
+    {
+      "id": "mathsolver",
+      "name": "Math Solver",
+      "icon": "Calculator",
+      "category": "nlp",
+      "coverImage": "/topics/mathsolver.jpg",
+      "images": [
+        "/topics/mathsolver.jpg",
+        "/topics/Model_training.jpg"
+      ],
+      "videos": [],
+      "demoUrl": "#",
+      "githubUrl": "#",
+      "tags": [
+        "AI",
+        "OCR",
+        "Deep Learning"
+      ],
+      "tools": [
+        "TensorFlow",
+        "CNN",
+        "Tesseract OCR",
+        "Streamlit"
+      ],
+      "description": "Developed OCR-based AI tools to detect and solve handwritten math problems using CNNs and Streamlit.",
+      "longDescription": "Combined computer vision and OCR to build an end-to-end handwritten math problem solver. A custom CNN preprocesses the image, Tesseract OCR extracts the expression, and SymPy computes the solution. Accepts photo uploads or live webcam input.",
+      "implementations": [
+        {
+          "name": "AI Math Solver",
+          "description": "Solves handwritten math problems using OCR and image recognition models"
+        },
+        {
+          "name": "Equation Recognizer",
+          "description": "Extracts and computes equations from scanned document images"
+        }
+      ]
+    },
+    {
+      "id": "fullstack-development",
+      "name": "Full-Stack Development",
+      "icon": "Layers",
+      "category": "web",
+      "coverImage": "/topics/Full_Stack_Developer.webp",
+      "images": [
+        "/topics/Full_Stack_Developer.webp",
+        "/topics/Fontend_webdevelopment.webp",
+        "/topics/Backend_development.webp"
+      ],
+      "videos": [],
+      "demoUrl": "#",
+      "githubUrl": "#",
+      "tags": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "API"
+      ],
+      "tools": [
+        "React",
+        "Tailwind CSS",
+        "Django",
+        "Django Rest Framework",
+        "Firebase",
+        "PostgreSQL"
+      ],
+      "description": "Experienced in building robust full-stack applications using React, Django, REST APIs, and Firebase.",
+      "longDescription": "Architect and deliver full-stack web applications from database schema to pixel-perfect UI. Backend services are built with Django REST Framework, secured with JWT auth, and deployed via Docker. Frontend apps use React + TypeScript with Tailwind CSS and Framer Motion.",
+      "implementations": [
+        {
+          "name": "Multi-Agent Website",
+          "description": "Website integrating multi-agent AI tools with a DRF REST backend"
+        },
+        {
+          "name": "Portfolio Website",
+          "description": "This responsive portfolio built with React, TypeScript and Tailwind CSS"
+        }
+      ]
+    },
+    {
+      "id": "frontend-development",
+      "name": "Frontend Development",
+      "icon": "Laptop",
+      "category": "web",
+      "coverImage": "/topics/Fontend_webdevelopment.webp",
+      "images": [
+        "/topics/Fontend_webdevelopment.webp",
+        "/topics/Full_Stack_Developer.webp"
+      ],
+      "videos": [],
+      "demoUrl": "#",
+      "githubUrl": "#",
+      "tags": [
+        "UI/UX",
+        "Design",
+        "Responsiveness"
+      ],
+      "tools": [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Bootstrap",
+        "HTML5",
+        "CSS3"
+      ],
+      "description": "Created responsive and visually appealing UIs using React, Tailwind, and modern web design practices.",
+      "longDescription": "Specialise in building fast, accessible, and visually polished frontends. Every project follows accessibility best practices, is fully responsive, and achieves high Lighthouse scores. Animations implemented with Framer Motion.",
+      "implementations": [
+        {
+          "name": "Responsive Portfolio",
+          "description": "Modern portfolio using React, TypeScript, and Tailwind CSS"
+        },
+        {
+          "name": "Landing Pages",
+          "description": "Multiple responsive marketing UIs for client projects"
+        }
+      ]
+    },
+    {
+      "id": "backend-development",
+      "name": "Backend Development",
+      "icon": "Server",
+      "category": "web",
+      "coverImage": "/topics/Backend_development.webp",
+      "images": [
+        "/topics/Backend_development.webp",
+        "/topics/Full_Stack_Developer.webp"
+      ],
+      "videos": [],
+      "demoUrl": "#",
+      "githubUrl": "#",
+      "tags": [
+        "API",
+        "Authentication",
+        "Database"
+      ],
+      "tools": [
+        "Django",
+        "Django Rest Framework",
+        "Firebase",
+        "PostgreSQL",
+        "JWT"
+      ],
+      "description": "Built secure and scalable backends using Django and DRF with token-based authentication and real-time Firebase integration.",
+      "longDescription": "Design and implement RESTful APIs that power web and mobile frontends. Authentication flows use JWT with refresh token rotation. APIs are documented with OpenAPI 3, containerised with Docker, and deployed behind Nginx.",
+      "implementations": [
+        {
+          "name": "Auth System",
+          "description": "Custom login/signup with JWT and refresh token rotation using Django"
+        },
+        {
+          "name": "API for AI Tools",
+          "description": "RESTful APIs wrapping AI services, deployed with Docker and Nginx"
+        }
+      ]
+    }
+  ]
+}
