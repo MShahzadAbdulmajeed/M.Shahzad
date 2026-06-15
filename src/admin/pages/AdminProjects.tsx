@@ -4,7 +4,7 @@ import { Plus, Pencil, Trash2, Eye } from 'lucide-react';
 import { useDB } from '../../hooks/useDB';
 import { saveDBLocal } from '../api';
 import toast from 'react-hot-toast';
-import type { DB, Project } from '../../types/db';
+import type { DB } from '../../types/db';
 
 export const AdminProjects: React.FC = () => {
   const { data, loading, invalidate } = useDB();

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const SESSION_KEY = 'portfolio_admin_auth';
 const PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD ?? 'admin123';

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Plus, Trash2 } from 'lucide-react';
 import { useDB } from '../../hooks/useDB';
 import { saveDBLocal } from '../api';
 import { Field, Input, Textarea, TagInput, SaveButton } from '../components/Field';
@@ -77,14 +76,11 @@ export const AdminHero: React.FC = () => {
         <p style={{ fontSize: '0.75rem', color: 'var(--indigo)', marginBottom: 6 }}>✦ {form.badge}</p>
         <h2 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: 6 }}>Hi, I'm <span className="grad-text">{form.name}</span></h2>
         <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>
-          {form.description.split(' ').map((word, i) => {
-            const match = form.highlightWords.find(hw => form.description.includes(hw) && hw.startsWith(word));
-            return (
+          {form.description.split(' ').map((word, i) => (
               <span key={i} style={form.highlightWords.some(hw => hw.includes(word)) ? { color: 'var(--text-base)', fontWeight: 700 } : {}}>
                 {word}{' '}
               </span>
-            );
-          })}
+            ))}
         </p>
       </div>
 
