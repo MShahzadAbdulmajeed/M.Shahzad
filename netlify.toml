@@ -3,6 +3,11 @@
   publish = "dist"
   functions = "netlify/functions"
 
+[build.environment]
+  # Skip the Next.js plugin — this is a Vite/React app, not Next.js
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NODE_VERSION = "18"
+
 [[redirects]]
   from = "/admin/*"
   to = "/index.html"
