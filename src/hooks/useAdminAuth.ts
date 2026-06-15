@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const SESSION_KEY = 'portfolio_admin_auth';
-const PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD ?? 'admin123';
+const PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD as string;
 
 export function useAdminAuth() {
   const [authed, setAuthed] = useState(() => sessionStorage.getItem(SESSION_KEY) === 'true');

@@ -7,6 +7,8 @@
   # Skip the Next.js plugin — this is a Vite/React app, not Next.js
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NODE_VERSION = "20"
+  # Tell secrets scanner to ignore this key (value is set via Netlify UI, never in code)
+  SECRETS_SCAN_OMIT_KEYS = "VITE_ADMIN_PASSWORD"
 
 [[redirects]]
   from = "/admin/*"

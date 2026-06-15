@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 const DB_PATH = path.join(process.cwd(), 'public', 'data', 'db.json');
-const PASSWORD = process.env.VITE_ADMIN_PASSWORD ?? 'admin123';
+const PASSWORD = process.env.VITE_ADMIN_PASSWORD;
 
 export const handler: Handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -13,7 +13,7 @@ export const handler: Handler = async (event) => {
   try {
     const body = JSON.parse(event.body ?? '{}');
 
-    if (body.password !== PASSWORD) {
+    if (!PASSWORD || body.password !== PASSWORD) {
       return { statusCode: 401, body: JSON.stringify({ error: 'Unauthorized' }) };
     }
 
