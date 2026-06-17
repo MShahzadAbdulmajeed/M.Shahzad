@@ -53,7 +53,7 @@ const ProjectGrid: React.FC = () => {
           </div>
         </div>
 
-        <motion.div layout style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 24 }}>
+        <motion.div layout className="projects-grid">
           <AnimatePresence mode="popLayout">
             {filtered.map(project => (
               <ProjectCard key={project.id} project={project} />

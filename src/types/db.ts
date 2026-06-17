@@ -33,9 +33,13 @@ export interface About {
   phone: string;
   location: string;
   availability: string;
+  yearsExp: string;
+  projectsCount: string;   // override for the "Projects" badge; if empty, uses live count
   cvUrl: string;
   githubUrl: string;
   linkedinUrl: string;
+  huggingfaceUrl: string;
+  twitterUrl: string;
   skillGroups: SkillGroup[];
 }
 

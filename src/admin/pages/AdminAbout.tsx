@@ -79,11 +79,17 @@ export const AdminAbout: React.FC = () => {
 
       <Section title="Personal Info">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-          <Field label="Your Name / Title">
+          <Field label="Your Name / Title" hint="Shown as your role headline (e.g. Full-Stack AI Engineer)">
             <Input value={form.title} onChange={e => set('title', e.target.value)} placeholder="Full-Stack AI Engineer" />
           </Field>
-          <Field label="Availability Status">
+          <Field label="Availability Badge" hint="Shown as the floating green badge on the hero photo">
             <Input value={form.availability} onChange={e => set('availability', e.target.value)} placeholder="Available for Freelance" />
+          </Field>
+          <Field label="Years of Experience" hint="Number shown on the Years Exp. badge (e.g. 2 → displays '2+')">
+            <Input type="number" min="0" value={form.yearsExp ?? '2'} onChange={e => set('yearsExp', e.target.value)} placeholder="2" />
+          </Field>
+          <Field label="Projects Count" hint="Number shown on the Projects badge. Enter a custom number (e.g. 20) — leave blank to use live project count.">
+            <Input type="number" min="0" value={form.projectsCount ?? ''} onChange={e => set('projectsCount', e.target.value)} placeholder="e.g. 20" />
           </Field>
           <Field label="Email">
             <Input type="email" value={form.email} onChange={e => set('email', e.target.value)} />
@@ -94,6 +100,27 @@ export const AdminAbout: React.FC = () => {
           <Field label="Location">
             <Input value={form.location} onChange={e => set('location', e.target.value)} />
           </Field>
+        </div>
+
+        {/* Live preview of the availability badge */}
+        {form.availability && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 16px', background: 'var(--bg-elevated)', border: '1px solid var(--border)', borderRadius: 12, alignSelf: 'flex-start' }}>
+            <div style={{ width: 8, height: 8, borderRadius: 9999, background: 'var(--emerald)', boxShadow: '0 0 6px var(--emerald)' }} />
+            <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-base)' }}>{form.availability}</span>
+            <span style={{ fontSize: '0.68rem', color: 'var(--text-faint)' }}>← availability badge</span>
+          </div>
+        )}
+
+        {/* Badge previews */}
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <div style={{ background: 'var(--bg-elevated)', border: '1px solid var(--border)', borderRadius: 12, padding: '12px 20px', textAlign: 'center', minWidth: 100 }}>
+            <p style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--indigo)', lineHeight: 1 }}>{form.yearsExp || '2'}+</p>
+            <p style={{ fontSize: '0.65rem', color: 'var(--text-faint)', marginTop: 4 }}>Years Exp. badge</p>
+          </div>
+          <div style={{ background: 'var(--bg-elevated)', border: '1px solid var(--border)', borderRadius: 12, padding: '12px 20px', textAlign: 'center', minWidth: 100 }}>
+            <p style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--emerald)', lineHeight: 1 }}>{form.projectsCount || data?.projects.length || 9}+</p>
+            <p style={{ fontSize: '0.65rem', color: 'var(--text-faint)', marginTop: 4 }}>Projects badge</p>
+          </div>
         </div>
         <ImagePicker
           label="Profile Photo"
@@ -112,6 +139,12 @@ export const AdminAbout: React.FC = () => {
         </Field>
         <Field label="LinkedIn URL">
           <Input value={form.linkedinUrl} onChange={e => set('linkedinUrl', e.target.value)} placeholder="https://linkedin.com/in/..." />
+        </Field>
+        <Field label="HuggingFace URL">
+          <Input value={form.huggingfaceUrl ?? ''} onChange={e => set('huggingfaceUrl', e.target.value)} placeholder="https://huggingface.co/your-username" />
+        </Field>
+        <Field label="Twitter / X URL" hint="Optional">
+          <Input value={form.twitterUrl ?? ''} onChange={e => set('twitterUrl', e.target.value)} placeholder="https://twitter.com/..." />
         </Field>
       </Section>
 

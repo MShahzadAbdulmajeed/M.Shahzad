@@ -17,16 +17,20 @@
     ]
   },
   "about": {
-    "photo": "https://cdn-avatars.huggingface.co/v1/production/uploads/67b335d52ea5fd965b0eab19/y9hNRDcAgn-mf3gV5Mjv-.jpeg",
+    "photo": "https://res.cloudinary.com/daympzgxr/image/upload/v1781701221/portfolio/smr8ft2c4m9moyljvlo2.jpg",
     "title": "Full-Stack AI Engineer",
     "bio": "I'm a dedicated Full-Stack AI Engineer passionate about bridging sophisticated AI models with user-centric web applications. My expertise spans autonomous multi-agent systems, real-time computer vision pipelines, and scalable backends using Django and DRF.",
     "email": "shahzad.abdulmajeed4894@gmail.com",
     "phone": "+92 320 6236425",
     "location": "Pakistan",
     "availability": "Available for Freelance",
+    "yearsExp": "5",
+    "projectsCount": "50",
     "cvUrl": "",
     "githubUrl": "https://github.com/MShahzadAbdulmajeed",
     "linkedinUrl": "https://www.linkedin.com/in/shahzad-abdulmajeed-618887220/",
+    "huggingfaceUrl": "https://huggingface.co/its-shezi",
+    "twitterUrl": "",
     "skillGroups": [
       {
         "label": "AI / ML",
@@ -84,7 +88,7 @@
       "name": "Object Detection",
       "icon": "Eye",
       "category": "cv",
-      "coverImage": "/uploads/images/Digital_e-signature_platform_thu____202606170049.jpeg",
+      "coverImage": "https://res.cloudinary.com/daympzgxr/image/upload/v1781701148/portfolio/zhximcz1ykisxhfmwz1x.jpg",
       "images": [
         "/topics/Object_Detection_AI.jpg",
         "/topics/Object_Detection_AI_1.jpg",

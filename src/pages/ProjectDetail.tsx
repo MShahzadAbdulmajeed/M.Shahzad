@@ -178,7 +178,7 @@ const ProjectDetail: React.FC = () => {
 
         {/* ══ Body ══ */}
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: 'clamp(24px,4vw,48px) clamp(16px,4vw,24px) 80px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 300px', gap: 40, alignItems: 'start' }}>
+          <div className="detail-grid">
 
             {/* ═══ Main column ═══ */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 52 }}>
@@ -195,11 +195,7 @@ const ProjectDetail: React.FC = () => {
                 <FadeUp delay={0.1}>
                   <section>
                     <SectionHeading icon={<Images size={18} />} title={`Gallery (${project.images.length} photos)`} />
-                    <div style={{
-                      display: 'grid',
-                      gridTemplateColumns: project.images.length === 1 ? '1fr' : project.images.length === 2 ? '1fr 1fr' : '1fr 1fr 1fr',
-                      gap: 10,
-                    }}>
+                    <div className="gallery-grid" data-count={project.images.length}>
                       {project.images.map((src, i) => (
                         <motion.div key={i}
                           whileHover={{ scale: 1.02 }}
@@ -308,7 +304,7 @@ const ProjectDetail: React.FC = () => {
 
             {/* ═══ Sticky Sidebar ═══ */}
             <FadeUp delay={0.15}>
-              <div style={{ position: 'sticky', top: 90, display: 'flex', flexDirection: 'column', gap: 18 }}>
+              <div className="detail-sidebar">
 
                 {/* CTA buttons */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
