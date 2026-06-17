@@ -4,6 +4,7 @@ import { useDB } from '../../hooks/useDB';
 import { saveDBLocal } from '../api';
 import { Field, Input, Textarea, TagInput, SaveButton } from '../components/Field';
 import { ImagePicker } from '../components/ImagePicker';
+import { Section } from '../components/Section';
 import toast from 'react-hot-toast';
 import type { About, SkillGroup } from '../../types/db';
 
@@ -68,15 +69,6 @@ export const AdminAbout: React.FC = () => {
   };
 
   if (loading || !form) return <p style={{ color: 'var(--text-muted)' }}>Loading…</p>;
-
-  const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-    <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 14, padding: '24px', marginBottom: 20 }}>
-      <p style={{ fontWeight: 800, fontSize: '0.95rem', marginBottom: 20, paddingBottom: 14, borderBottom: '1px solid var(--border)' }}>{title}</p>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-        {children}
-      </div>
-    </div>
-  );
 
   return (
     <div style={{ maxWidth: 800 }}>
