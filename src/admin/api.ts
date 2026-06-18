@@ -1,10 +1,14 @@
 import type { DB } from '../types/db';
 
+/**
+ * Production save — calls the Netlify Function which uses the
+ * Supabase service-role key (never exposed to the browser).
+ */
 export async function saveDB(db: DB, password: string): Promise<void> {
   const res = await fetch('/.netlify/functions/save-db', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ...db, password }),
+    body: JSON.stringify({ data: db, password }),
   });
   if (!res.ok) {
     const err = await res.json().catch(() => ({ error: 'Unknown error' }));
@@ -12,15 +16,26 @@ export async function saveDB(db: DB, password: string): Promise<void> {
   }
 }
 
-/** Dev-only: write to local file system via a simple local server.
- *  In production on Netlify, save-db function handles it.
- *  In local dev (vite), we write directly via a custom vite plugin.
+/**
+ * Used in all admin pages.
+ * - In local dev  → hits the Vite middleware  → writes to db.json (for easy testing)
+ * - In production → hits /.netlify/functions/save-db → writes to Supabase
  */
 export async function saveDBLocal(db: DB): Promise<void> {
-  const res = await fetch('/api/save-db', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(db),
-  });
-  if (!res.ok) throw new Error('Local save failed');
+  // Check if we're running locally (Vite dev server) or on Netlify
+  const isLocal = import.meta.env.DEV;
+
+  if (isLocal) {
+    // Dev: write to local db.json via Vite middleware
+    const res = await fetch('/api/save-db', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(db),
+    });
+    if (!res.ok) throw new Error('Local save failed');
+  } else {
+    // Production: save to Supabase via Netlify Function
+    const password = import.meta.env.VITE_ADMIN_PASSWORD as string;
+    await saveDB(db, password);
+  }
 }

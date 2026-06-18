@@ -53,7 +53,7 @@ function localAdminPlugin() {
     name: 'local-admin-api',
     configureServer(server: any) {
 
-      /* ── Save DB ── */
+      /* ── Save DB (dev only — also updates local db.json) ── */
       server.middlewares.use('/api/save-db', (req: any, res: any) => {
         if (req.method !== 'POST') { res.statusCode = 405; res.end(); return; }
         const chunks: Buffer[] = [];
