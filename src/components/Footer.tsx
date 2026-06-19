@@ -23,9 +23,11 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <div style={{ width: 40, height: 40, borderRadius: 9999, overflow: 'hidden', border: '2px solid var(--indigo)', flexShrink: 0 }}>
-              <img src={about?.photo ?? '/shahzad_image.jpg'} alt="M.Shahzad"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                onError={e => { (e.target as HTMLImageElement).src = '/shahzad_image.jpg'; }} />
+              {about?.photo && (
+                <img src={about.photo} alt="M.Shahzad"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              )}
             </div>
             <div>
               <p style={{ fontWeight: 800, color: 'var(--indigo)', fontSize: '1rem' }}>M.Shahzad</p>

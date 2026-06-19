@@ -48,12 +48,13 @@ const Navbar: React.FC = () => {
         <motion.a href="/" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
           style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
           <div style={{ width: 36, height: 36, borderRadius: 9999, overflow: 'hidden', border: '2px solid var(--indigo)', flexShrink: 0 }}>
-            <img
-              src={about?.photo ?? '/shahzad_image.jpg'}
-              alt={data?.hero?.name ?? 'M.Shahzad'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              onError={e => { (e.target as HTMLImageElement).src = '/shahzad_image.jpg'; }}
-            />
+            {about?.photo && (
+              <img
+                src={about.photo}
+                alt={data?.hero?.name ?? 'M.Shahzad'}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            )}
           </div>
           <span style={{ fontWeight: 800, fontSize: '1rem', color: 'var(--indigo)' }} className="glow-text nav-name">
             M.Shahzad

@@ -1,4 +1,5 @@
 import type { DB } from '../types/db';
+import { supabase } from '../lib/supabase';
 
 /**
  * Production save — calls the Netlify Function which uses the
@@ -18,7 +19,7 @@ export async function saveDB(db: DB, password: string): Promise<void> {
 
 /**
  * Used in all admin pages.
- * - In local dev  → hits the Vite middleware  → writes to db.json (for easy testing)
+ * - In local dev  → hits the Vite middleware  → writes to db.json (for easy testing) AND updates Supabase via RPC
  * - In production → hits /.netlify/functions/save-db → writes to Supabase
  */
 export async function saveDBLocal(db: DB): Promise<void> {
@@ -33,6 +34,13 @@ export async function saveDBLocal(db: DB): Promise<void> {
       body: JSON.stringify(db),
     });
     if (!res.ok) throw new Error('Local save failed');
+
+    // Also sync directly to Supabase via RPC helper function
+    const { error } = await supabase.rpc('update_portfolio', { new_data: db });
+    if (error) {
+      console.error('Failed to sync to Supabase local dev:', error);
+      throw new Error(`Supabase sync failed: ${error.message}`);
+    }
   } else {
     // Production: save to Supabase via Netlify Function
     const password = import.meta.env.VITE_ADMIN_PASSWORD as string;

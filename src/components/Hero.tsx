@@ -104,14 +104,15 @@ const Hero: React.FC = () => {
             <div style={{ position: 'absolute', inset: -3, borderRadius: '50%', background: 'linear-gradient(135deg, var(--indigo), var(--emerald))', filter: 'blur(20px)', opacity: 0.35 }} />
             {/* Photo */}
             <div style={{ position: 'relative', borderRadius: '50%', overflow: 'hidden', border: '3px solid rgba(99,102,241,0.4)', aspectRatio: '1', background: 'var(--bg-card)' }}>
+            {about?.photo && (
               <img
-                src={about?.photo ?? '/shahzad_image.jpg'}
+                src={about.photo}
                 alt={hero?.name ?? 'M.Shahzad'}
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.5s' }}
                 onMouseEnter={e => ((e.target as HTMLImageElement).style.transform = 'scale(1.04)')}
                 onMouseLeave={e => ((e.target as HTMLImageElement).style.transform = 'scale(1)')}
-                onError={e => { (e.target as HTMLImageElement).src = '/shahzad_image.jpg'; }}
               />
+            )}
             </div>
             {/* Availability badge */}
             <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 3, repeat: Infinity }}

@@ -42,12 +42,13 @@ const About: React.FC = () => {
             <div className="about-photo-wrap">
               <div style={{ position: 'absolute', inset: -3, borderRadius: 22, background: 'linear-gradient(135deg, var(--indigo), var(--emerald))', filter: 'blur(22px)', opacity: 0.3 }} />
               <div style={{ position: 'relative', background: 'var(--bg-card)', borderRadius: 20, padding: 6, border: '1px solid var(--border)' }}>
-                <img src={about.photo} alt="M.Shahzad"
-                  style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: 16, display: 'block', transition: 'filter 0.5s', filter: 'grayscale(15%)' }}
-                  onMouseEnter={e => ((e.target as HTMLImageElement).style.filter = 'grayscale(0%)')}
-                  onMouseLeave={e => ((e.target as HTMLImageElement).style.filter = 'grayscale(15%)')}
-                  onError={e => { (e.target as HTMLImageElement).src = '/shahzad_image.jpg'; }}
-                />
+                {about.photo && (
+                  <img src={about.photo} alt="M.Shahzad"
+                    style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: 16, display: 'block', transition: 'filter 0.5s', filter: 'grayscale(15%)' }}
+                    onMouseEnter={e => ((e.target as HTMLImageElement).style.filter = 'grayscale(0%)')}
+                    onMouseLeave={e => ((e.target as HTMLImageElement).style.filter = 'grayscale(15%)')}
+                  />
+                )}
               </div>
 
               <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 3.5, repeat: Infinity }}

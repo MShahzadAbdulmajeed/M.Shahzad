@@ -124,7 +124,7 @@ export const AdminAbout: React.FC = () => {
         </div>
         <ImagePicker
           label="Profile Photo"
-          hint="Upload or pick from gallery. Use /shahzad_image.jpg for the default."
+          hint="Upload or pick from gallery. Use /shahzad_image.jpeg for the default."
           value={form.photo}
           onChange={url => set('photo', url)}
         />
